@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentimentModel_WebApi1", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SentimentModel_ConsoleApp1", "SentimentModel_ConsoleApp1\SentimentModel_ConsoleApp1.csproj", "{5DAB7D5B-55E9-48A3-8BCE-E914AB232080}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft", "Microsoft", "{95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sentiment_BinaryClassification", "Microsoft\Sentiment_BinaryClassification\Sentiment_BinaryClassification.csproj", "{21D93397-09CB-444B-9998-5215CE0F4E30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{5DAB7D5B-55E9-48A3-8BCE-E914AB232080}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DAB7D5B-55E9-48A3-8BCE-E914AB232080}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DAB7D5B-55E9-48A3-8BCE-E914AB232080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21D93397-09CB-444B-9998-5215CE0F4E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21D93397-09CB-444B-9998-5215CE0F4E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21D93397-09CB-444B-9998-5215CE0F4E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21D93397-09CB-444B-9998-5215CE0F4E30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21D93397-09CB-444B-9998-5215CE0F4E30} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0139B1D2-B4A1-437D-81C8-240A3A6EEB56}
