@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MulticlassClassification", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regression_PricePredictor", "Microsoft\Regression_PricePredictor\Regression_PricePredictor.csproj", "{1B6C524F-7858-4EE7-84BA-D97BCF31F354}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustering_IrisClustering", "Microsoft\Clustering_IrisClustering\Clustering_IrisClustering.csproj", "{F202213B-7FC7-4D1B-8570-316B82B98015}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{1B6C524F-7858-4EE7-84BA-D97BCF31F354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B6C524F-7858-4EE7-84BA-D97BCF31F354}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B6C524F-7858-4EE7-84BA-D97BCF31F354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F202213B-7FC7-4D1B-8570-316B82B98015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F202213B-7FC7-4D1B-8570-316B82B98015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F202213B-7FC7-4D1B-8570-316B82B98015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F202213B-7FC7-4D1B-8570-316B82B98015}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{21D93397-09CB-444B-9998-5215CE0F4E30} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 		{1C005C82-DEB7-4550-90E3-87CE1B970A97} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 		{1B6C524F-7858-4EE7-84BA-D97BCF31F354} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
+		{F202213B-7FC7-4D1B-8570-316B82B98015} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0139B1D2-B4A1-437D-81C8-240A3A6EEB56}
