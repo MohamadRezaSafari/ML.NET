@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regression_PricePredictor",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustering_IrisClustering", "Microsoft\Clustering_IrisClustering\Clustering_IrisClustering.csproj", "{F202213B-7FC7-4D1B-8570-316B82B98015}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recommendation", "Microsoft\Recommendation\Recommendation.csproj", "{C56F557E-CE7A-4139-B0FC-F6FEE54B33C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recommendation", "Microsoft\Recommendation\Recommendation.csproj", "{C56F557E-CE7A-4139-B0FC-F6FEE54B33C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageClassification", "Microsoft\ImageClassification\ImageClassification.csproj", "{A2D7352B-05C9-4C82-9906-7CE26EA87795}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{C56F557E-CE7A-4139-B0FC-F6FEE54B33C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C56F557E-CE7A-4139-B0FC-F6FEE54B33C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C56F557E-CE7A-4139-B0FC-F6FEE54B33C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D7352B-05C9-4C82-9906-7CE26EA87795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D7352B-05C9-4C82-9906-7CE26EA87795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D7352B-05C9-4C82-9906-7CE26EA87795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D7352B-05C9-4C82-9906-7CE26EA87795}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{1B6C524F-7858-4EE7-84BA-D97BCF31F354} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 		{F202213B-7FC7-4D1B-8570-316B82B98015} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 		{C56F557E-CE7A-4139-B0FC-F6FEE54B33C6} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
+		{A2D7352B-05C9-4C82-9906-7CE26EA87795} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0139B1D2-B4A1-437D-81C8-240A3A6EEB56}
