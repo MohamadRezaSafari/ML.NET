@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageClassification", "Micr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnomalyDetection", "Microsoft\AnomalyDetection\AnomalyDetection.csproj", "{D7115A59-2042-4618-880B-1BA76A8DA749}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetectObjectsInImages", "Microsoft\DetectObjectsInImages\DetectObjectsInImages.csproj", "{D837CE4B-0D37-4CEC-9E7B-184D396E43C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{D7115A59-2042-4618-880B-1BA76A8DA749}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7115A59-2042-4618-880B-1BA76A8DA749}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7115A59-2042-4618-880B-1BA76A8DA749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D837CE4B-0D37-4CEC-9E7B-184D396E43C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D837CE4B-0D37-4CEC-9E7B-184D396E43C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D837CE4B-0D37-4CEC-9E7B-184D396E43C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D837CE4B-0D37-4CEC-9E7B-184D396E43C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{C56F557E-CE7A-4139-B0FC-F6FEE54B33C6} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 		{A2D7352B-05C9-4C82-9906-7CE26EA87795} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 		{D7115A59-2042-4618-880B-1BA76A8DA749} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
+		{D837CE4B-0D37-4CEC-9E7B-184D396E43C9} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0139B1D2-B4A1-437D-81C8-240A3A6EEB56}
