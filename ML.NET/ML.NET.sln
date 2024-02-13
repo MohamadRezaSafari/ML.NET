@@ -23,9 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recommendation", "Microsoft
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageClassification", "Microsoft\ImageClassification\ImageClassification.csproj", "{A2D7352B-05C9-4C82-9906-7CE26EA87795}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnomalyDetection", "Microsoft\AnomalyDetection\AnomalyDetection.csproj", "{D7115A59-2042-4618-880B-1BA76A8DA749}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnomalyDetection", "Microsoft\AnomalyDetection\AnomalyDetection.csproj", "{D7115A59-2042-4618-880B-1BA76A8DA749}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetectObjectsInImages", "Microsoft\DetectObjectsInImages\DetectObjectsInImages.csproj", "{D837CE4B-0D37-4CEC-9E7B-184D396E43C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DetectObjectsInImages", "Microsoft\DetectObjectsInImages\DetectObjectsInImages.csproj", "{D837CE4B-0D37-4CEC-9E7B-184D396E43C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercise", "Exercise", "{D75F4F3C-8B56-4BA2-99C0-481CD54BD836}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateImages", "Exercise\GenerateImages\GenerateImages.csproj", "{CBCA293D-C759-45F8-80A3-C2A6A5115B16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassifySentiment", "Microsoft\ClassifySentiment\ClassifySentiment.csproj", "{4D0CB8FB-A013-4DB8-AD5A-ABAA801F521F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +83,14 @@ Global
 		{D837CE4B-0D37-4CEC-9E7B-184D396E43C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D837CE4B-0D37-4CEC-9E7B-184D396E43C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D837CE4B-0D37-4CEC-9E7B-184D396E43C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBCA293D-C759-45F8-80A3-C2A6A5115B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBCA293D-C759-45F8-80A3-C2A6A5115B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBCA293D-C759-45F8-80A3-C2A6A5115B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBCA293D-C759-45F8-80A3-C2A6A5115B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D0CB8FB-A013-4DB8-AD5A-ABAA801F521F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D0CB8FB-A013-4DB8-AD5A-ABAA801F521F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D0CB8FB-A013-4DB8-AD5A-ABAA801F521F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D0CB8FB-A013-4DB8-AD5A-ABAA801F521F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +104,8 @@ Global
 		{A2D7352B-05C9-4C82-9906-7CE26EA87795} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 		{D7115A59-2042-4618-880B-1BA76A8DA749} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 		{D837CE4B-0D37-4CEC-9E7B-184D396E43C9} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
+		{CBCA293D-C759-45F8-80A3-C2A6A5115B16} = {D75F4F3C-8B56-4BA2-99C0-481CD54BD836}
+		{4D0CB8FB-A013-4DB8-AD5A-ABAA801F521F} = {95DCE7BF-17C1-418E-A7AD-8D827CB9F2D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0139B1D2-B4A1-437D-81C8-240A3A6EEB56}
