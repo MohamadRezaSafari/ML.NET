@@ -1,38 +1,32 @@
-﻿//using Microsoft.ML.OnnxRuntime;
+﻿using StableDiffusion.ML.OnnxRuntime;
 
-//var prompt = "a fireplace in an old cabin in the woods";
-////...
-//var textTokenized = TextProcessing.TokenizeText(prompt);
-//var textPromptEmbeddings = TextProcessing.TextEncoder(textTokenized).ToArray();
+var watch = System.Diagnostics.Stopwatch.StartNew();
 
-////...
-//var scheduler = new LMSDiscreteScheduler();
-////...
-//var timesteps = scheduler.SetTimesteps(numInferenceSteps);
-////...
-//var seed = new Random().Next();
-//var latents = GenerateLatentSample(batchSize, height, width, seed, scheduler.InitNoiseSigma);
-////...
-//var unetSession = new InferenceSession(modelPath, options);
-//var input = new List<NamedOnnxValue>();
-////...
-//for (int t = 0; t < timesteps.Length; t++)
-//{
-//    //...
-//    var latentModelInput = TensorHelper.Duplicate(latents.ToArray(), new[] { 2, 4, height / 8, width / 8 });
-//    //...
-//    latentModelInput = scheduler.ScaleInput(latentModelInput, timesteps[t]);
-//    //...
-//    input = CreateUnetModelInput(textEmbeddings, latentModelInput, timesteps[t]);
-//    var output = unetSession.Run(input);
-//    //...
-//    noisePred = performGuidance(noisePred, noisePredText, guidanceScale);
-//    //...
-//    latents = scheduler.Step(noisePred, timesteps[t], latents);
-//}
+//Default args
+var prompt = "a fireplace in an old cabin in the woods";
+Console.WriteLine(prompt);
 
+var config = new StableDiffusionConfig
+{
+    NumInferenceSteps = 15,
+    GuidanceScale = 7.5,
+    ExecutionProviderTarget = StableDiffusionConfig.ExecutionProvider.Cuda,
+    DeviceId = 0,
+    TextEncoderOnnxPath = @"C:\code\StableDiffusion\StableDiffusion\models\text_encoder\model.onnx",
+    UnetOnnxPath = @"C:\code\StableDiffusion\StableDiffusion\models\unet\model.onnx",
+    VaeDecoderOnnxPath = @"C:\code\StableDiffusion\StableDiffusion\models\vae_decoder\model.onnx",
+    SafetyModelPath = @"C:\code\StableDiffusion\StableDiffusion\models\safety_checker\model.onnx",
+};
 
-//var decoderInput = new List<NamedOnnxValue>
-//{ NamedOnnxValue.CreateFromTensor("latent_sample", latents) };
-//var imageResultTensor = VaeDecoder.Decoder(decoderInput);
-//var image = VaeDecoder.ConvertToImage(imageResultTensor);
+// Inference Stable Diff
+var image = UNet.Inference(prompt, config);
+
+// If image failed or was unsafe it will return null.
+if (image == null)
+{
+    Console.WriteLine("Unable to create image, please try again.");
+}
+// Stop the timer
+watch.Stop();
+var elapsedMs = watch.ElapsedMilliseconds;
+Console.WriteLine("Time taken: " + elapsedMs + "ms");
