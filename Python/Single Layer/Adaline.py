@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from AdaptiveLinearNeurons import AdalineGD
+from AdalineSGD import AdalineSGD
 from matplotlib.colors import ListedColormap
 
 url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
@@ -55,7 +56,7 @@ def plot_decision_regions(X, y, classifier, resolution=0.02):
             marker=markers[idx],
             label=f'Class {cl}',
             edgecolor='black')
-            
+
 
 X_std = np.copy(X)
 X_std[:,0] = (X[:,0] - X[:,0].mean()) / X[:,0].std()
@@ -63,14 +64,33 @@ X_std[:,1] = (X[:,1] - X[:,1].mean()) / X[:,1].std()
 ada_gd = AdalineGD(n_iter=20, eta=0.5)
 ada_gd.fit(X_std, y)
 plot_decision_regions(X_std, y, classifier=ada_gd)
+
 plt.title('Adaline - Gradient descent')
 plt.xlabel('Sepal length [standardized]')
 plt.ylabel('Petal length [standardized]')
 plt.legend(loc='upper left')
 plt.tight_layout()
 plt.show()
+
 plt.plot(range(1, len(ada_gd.losses_) + 1), ada_gd.losses_, marker='o')
 plt.xlabel('Epochs')
 plt.ylabel('Mean squared error')
+plt.tight_layout()
+plt.show()
+
+
+ada_sgd = AdalineSGD(n_iter=15, eta=0.01, random_state=1)
+ada_sgd.fit(X_std, y)
+plot_decision_regions(X_std, y, classifier=ada_sgd)
+plt.title('Adaline - Stochastic gradient descent')
+plt.xlabel('Sepal length [standardized]')
+plt.ylabel('Petal length [standardized]')
+plt.legend(loc='upper left')
+plt.tight_layout()
+plt.show()
+
+plt.plot(range(1, len(ada_sgd.losses_) + 1), ada_sgd.losses_, marker='o')
+plt.xlabel('Epochs')
+plt.ylabel('Average loss')
 plt.tight_layout()
 plt.show()
