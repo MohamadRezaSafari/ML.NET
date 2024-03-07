@@ -3,6 +3,11 @@ import nltk
 import spacy
 
 
+nltk.download()
+nltk.download('tagsets')
+nltk.help.upenn_tagset()
+
+
 curerntPath = os.path.dirname(os.path.abspath(__file__))
 filename = os.path.join(curerntPath, 'sherlock_holmes_1.txt')
 
@@ -21,6 +26,9 @@ text = file.read()
 # print(word_pos_tuples)
 
 
+
 text = text.replace("\n", " ")
 words = nltk.tokenize.word_tokenize(text)
 words_with_pos = nltk.pos_tag(words)
+
+print(words_with_pos)
