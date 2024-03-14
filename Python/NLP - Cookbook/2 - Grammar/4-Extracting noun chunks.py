@@ -24,4 +24,13 @@ sentence = "All emotions, and that one particularly, were abhorrent to his cold,
 doc2 = nlp(sentence)
 
 for noun_chunk in doc2.noun_chunks:
-    print(noun_chunk)
+    # print(noun_chunk.text, "\t", noun_chunk.start, "\t", noun_chunk.end)
+    # print(noun_chunk.text, "\t", noun_chunk.sent)
+    print(noun_chunk.text, "\t", noun_chunk.root.text)
+
+
+other_span = "emotions"
+other_doc = nlp(other_span)
+
+for noun_chunk in doc.noun_chunks:
+    print(noun_chunk.similarity(other_doc))
