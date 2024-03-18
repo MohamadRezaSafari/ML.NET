@@ -4,6 +4,8 @@
 *.txt
 *.gz
 *.jpg
+*.zip
+*.bin
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
