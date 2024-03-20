@@ -3,11 +3,11 @@ from whoosh.index import create_in
 from whoosh.analysis import StemmingAnalyzer
 from whoosh.qparser import MultifieldParser
 import csv
-from Chapter03.word_embeddings import w2vec_model_path
-from Chapter03.word_embeddings import load_model
+# from Chapter03.word_embeddings import w2vec_model_path
+# from Chapter03.word_embeddings import load_model
 
 
-imdb_dataset_path = "Chapter03/IMDB-Movie-Data.csv"
+imdb_dataset_path = "IMDB-Movie-Data.csv"
 search_engine_index_path = "Chapter03/whoosh_index"
 
 
