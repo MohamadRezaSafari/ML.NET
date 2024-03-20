@@ -6,6 +6,7 @@
 *.jpg
 *.zip
 *.bin
+*.json
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
