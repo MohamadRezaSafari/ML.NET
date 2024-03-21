@@ -24,6 +24,6 @@ text = file.read()
 text = text.replace("\n", " ")
 nlp = spacy.load("en_core_web_sm")
 doc = nlp(text)
-words  =[token.text for token in doc]
+words = [token.text for token in doc]
 
 print(words)
