@@ -109,11 +109,17 @@ def split_test_train(data, train_percent):
     return (train_data, test_data)
 
 
+def get_labels(labels):
+    le = preprocessing.LabelEncoder()
+    le.fit(labels)
+    return le
+
 (business_train_data, business_test_data) = split_test_train(business_data, 0.8)
 (sports_train_data, sports_test_data) = split_test_train(sports_data, 0.8)
 train_data = business_train_data + sports_train_data
 tfidf_vec = create_vectorizer(train_data)
-# le = get_labels(["business", "sport"])
+
+le = get_labels(["business", "sport"])
 
 
 def create_dataset(vectorizer, data_dict, le):
