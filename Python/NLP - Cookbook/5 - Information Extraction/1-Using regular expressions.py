@@ -44,3 +44,7 @@ def get_urls(df):
 df = pd.read_csv(data_file, encoding='utf-8')
 emails = get_emails(df)
 print(emails)
+
+
+urls = get_urls(df)
+print(urls)
