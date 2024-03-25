@@ -8,7 +8,8 @@ from pathlib import Path
 
 
 curerntPath = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.join(curerntPath, "model_output")
+OUTPUT_DIR = os.path.join(curerntPath, 'model_output')
+# os.path.join(curerntPath, "model_output")
 N_ITER=100
 
 DATA = [
@@ -103,3 +104,69 @@ def without_training(data=DATA):
            
 
 without_training()
+
+
+# model = "en_core_web_sm"
+# nlp = train_model(model)
+# test_model(nlp, DATA)
+# save_model(nlp, OUTPUT_DIR)
+
+
+# def load_and_test(model_dir, data=DATA):
+#     nlp = load_model(model_dir)
+#     test_model(nlp, data)
+
+# load_and_test(OUTPUT_DIR)
+
+
+
+NEW_LABEL = "GAULISH_WARRIOR"
+MODIFIED_DATA = [
+("A fakir from far-away India travels to Asterix's\
+village and asks Cacofonix to save his land from\
+drought since his singing can cause rain.",
+{'entities':[(39, 46, NEW_LABEL),
+(66, 75, NEW_LABEL)]}),
+("Cacofonix, accompanied by Asterix and Obelix, \
+must travel to India aboard a magic carpet to\
+save the life of the princess Orinjade, who is to\
+be sacrificed to stop the drought.",
+{'entities':[(0, 9, NEW_LABEL),
+(26, 33, NEW_LABEL),
+(38, 44, NEW_LABEL),
+(61, 66, "LOC"),
+(122, 130, "PERSON")]})
+]
+
+
+
+def train_model_new_entity_type(model=None):
+    random.seed(0)
+    nlp = create_model(model)
+    (nlp, ner) = add_ner_to_model(nlp)
+    ner = add_labels(ner, MODIFIED_DATA)
+    if model is None:
+        optimizer = nlp.begin_training()
+    else:
+        optimizer = nlp.resume_training()
+    move_names = list(ner.move_names)
+    pipe_exceptions = ["ner", "trf_wordpiecer", "trf_tok2vec"]
+    other_pipes = [pipe for pipe in nlp.pipe_names if pipe not in pipe_exceptions]
+    with nlp.disable_pipes(*other_pipes), warnings.catch_warnings():
+        warnings.filterwarnings("once", category=UserWarning, module='spacy')
+        sizes = compounding(1.0, 4.0, 1.001)
+        for itn in range(N_ITER):
+            random.shuffle(MODIFIED_DATA)
+            batches = minibatch(MODIFIED_DATA, size=sizes)
+            losses = {}
+            for batch in batches:
+                texts, annotations = zip(*batch)
+                nlp.update(texts, annotations, sgd=optimizer, drop=0.35, losses=losses)
+            print("Losses", losses)
+    return nlp
+
+
+
+model = "en_core_web_sm"
+nlp = train_model_new_entity_type(model)
+test_model(nlp, DATA)
