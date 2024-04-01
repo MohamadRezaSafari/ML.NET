@@ -22,8 +22,8 @@ pairs = [
     ]
  
 
-chatbot = Chat(pairs, reflections)
-chatbot.converse()
+# chatbot = Chat(pairs, reflections)
+# chatbot.converse()
 
 
-# eliza_chat()
+eliza_chat()
